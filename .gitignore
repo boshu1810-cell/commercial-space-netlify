@@ -1,5 +1,6 @@
 .DS_Store
 Thumbs.db
+.tools/
 .netlify/
 node_modules/
 premium-narrative-onepage-site-skill.md
