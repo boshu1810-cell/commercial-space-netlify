@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>从太空竞赛到轨道经济 | 商业航天发展史</title>
+    <meta
+      name="description"
+      content="一页读懂商业航天如何从美苏太空竞赛、中美航天竞争、马斯克超前路线与商业机制中走向星际文明。"
+    />
+    <link rel="preload" href="assets/hero-orbital-economy.png" as="image" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="starfield" aria-hidden="true"></canvas>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="scroll-meter" aria-hidden="true"><span></span></div>
+
+    <header class="site-header" data-glass>
+      <a class="brand" href="#top" aria-label="返回顶部">
+        <span class="brand-mark"></span>
+        <span>轨道经济简史</span>
+      </a>
+      <nav class="nav" aria-label="页面导航">
+        <a href="#acts">阶段</a>
+        <a href="#timeline">时间线</a>
+        <a href="#compare">机制</a>
+        <a href="#future">未来</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-media" aria-hidden="true"></div>
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content reveal">
+          <p class="eyebrow">1957-未来 · 美苏竞赛 · 中美同台 · 星际文明</p>
+          <h1 id="hero-title">从太空竞赛到轨道经济</h1>
+          <p class="hero-lede">
+            商业航天不是简单的公司发射火箭，而是用商业机制支撑高风险探索。
+            就像大航海时代的公私合力曾推动远洋冒险，今天的轨道经济正在把人类文明推向月球、火星和更远的星际未来。
+          </p>
+          <div class="hero-actions" aria-label="关键主题">
+            <a class="primary-action" href="#timeline">进入时间线</a>
+            <a class="secondary-action" href="#civilization">看文明升维</a>
+          </div>
+        </div>
+        <div class="hero-stats reveal" aria-label="页面主题摘要">
+          <article>
+            <img src="assets/card-summary-cold-war.png" alt="" />
+            <span>01</span>
+            <strong>冷战竞赛</strong>
+            <p>太空首先是制度、军事与工业能力的舞台。</p>
+          </article>
+          <article>
+            <img src="assets/card-summary-china-us.png" alt="" />
+            <span>02</span>
+            <strong>中美同台</strong>
+            <p>国家工程和商业集群共同进入轨道竞争。</p>
+          </article>
+          <article>
+            <img src="assets/card-summary-interstellar.png" alt="" />
+            <span>03</span>
+            <strong>星际文明</strong>
+            <p>马斯克路线把商业航天推向火星和多行星文明。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="intro section-pad">
+        <div class="section-kicker">主线</div>
+        <div class="intro-grid">
+          <div class="intro-copy reveal">
+            <h2>四条叙事线，汇成一条文明洪流</h2>
+            <p>
+              早期是美苏线：太空是超级大国竞赛。今天是中美线：国家能力、商业公司和低轨星座同台较量。
+              第三条是马斯克线：SpaceX 的速度明显跑在商业航天前列。最后一条是文明线：
+              商业机制让探索不再只靠国家预算，而成为推动人类升维的长期动力。
+            </p>
+          </div>
+          <div class="track-cards" aria-label="四条叙事轨道">
+            <article class="track-card reveal" data-track-card="cold">
+              <span class="track-dot"></span>
+              <p>美苏线</p>
+              <strong>从 Sputnik 到 Apollo，太空首先是超级大国的国家意志。</strong>
+            </article>
+            <article class="track-card reveal" data-track-card="china" id="china-track">
+              <span class="track-dot"></span>
+              <p>中美线</p>
+              <strong>进入 21 世纪后，竞争中心从美苏转向中美：空间站、月球、低轨星座和商业火箭同时展开。</strong>
+            </article>
+            <article class="track-card reveal" data-track-card="market">
+              <span class="track-dot"></span>
+              <p>马斯克线</p>
+              <strong>SpaceX 把可复用、Starlink、载人运输和火星叙事压成一条高速推进的商业路线。</strong>
+            </article>
+            <article class="track-card reveal" data-track-card="civilization">
+              <span class="track-dot"></span>
+              <p>文明线</p>
+              <strong>商业航天像大航海时代的公私合力，把冒险转化为可持续的文明扩张机制。</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="acts section-pad" id="acts" aria-labelledby="acts-title">
+        <div class="section-head reveal">
+          <div class="section-kicker">历史阶段</div>
+          <h2 id="acts-title">每个时代，都有自己的象征物</h2>
+          <p>下面不再只是一组文字卡片：每个阶段都有对应的历史 symbol，形成从冷战、国家基建、中美竞争到星际文明的视觉阶梯。</p>
+        </div>
+
+        <div class="act-grid">
+          <article class="act-card reveal">
+            <div class="act-media"><img src="assets/stage-cold-war.png" alt="" /></div>
+            <div class="act-year">1957-1975</div>
+            <h3>美苏太空竞赛</h3>
+            <p>卫星、载人、登月，是冷战国家意志的最高舞台。</p>
+          </article>
+          <article class="act-card reveal">
+            <div class="act-media"><img src="assets/stage-infrastructure.png" alt="" /></div>
+            <div class="act-year">1976-1999</div>
+            <h3>空间基础设施时代</h3>
+            <p>航天飞机、空间站和长期在轨实验，把太空从壮举变成系统工程。</p>
+          </article>
+          <article class="act-card reveal">
+            <div class="act-media"><img src="assets/stage-china-rise.png" alt="" /></div>
+            <div class="act-year">2000-2014</div>
+            <h3>中国国家航天崛起</h3>
+            <p>神舟、天宫、嫦娥让中国建立独立完整的空间能力。</p>
+          </article>
+          <article class="act-card reveal">
+            <div class="act-media"><img src="assets/stage-musk-line.png" alt="" /></div>
+            <div class="act-year">2002-2020</div>
+            <h3>马斯克超前线</h3>
+            <p>SpaceX 用可复用火箭、商业载人和 Starlink，把商业航天速度推到新量级。</p>
+          </article>
+          <article class="act-card reveal">
+            <div class="act-media"><img src="assets/stage-china-us.png" alt="" /></div>
+            <div class="act-year">2021-现在</div>
+            <h3>中美商业航天同台</h3>
+            <p>美国领先在复用和商业化，中国追赶在空间站、月球工程、民营火箭和低轨星座。</p>
+          </article>
+          <article class="act-card reveal act-card-wide">
+            <div class="act-media"><img src="assets/stage-civilization-ascent.png" alt="" /></div>
+            <div class="act-year">未来</div>
+            <h3>文明升维</h3>
+            <p>月球基地、火星移民和深空运输，让商业航天从产业故事变成文明故事。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="timeline-wrap section-pad" id="timeline" aria-labelledby="timeline-title">
+        <div class="section-head reveal">
+          <div class="section-kicker">四线时间线</div>
+          <h2 id="timeline-title">从美苏线，到中美线，再到马斯克线</h2>
+          <p>筛选不同轨道，可以看到国家竞赛、商业机制和文明目标怎样相互交错。</p>
+        </div>
+
+        <div class="filter-bar reveal" role="toolbar" aria-label="时间线筛选">
+          <button class="filter active" type="button" data-filter="all">全部</button>
+          <button class="filter" type="button" data-filter="cold">美苏线</button>
+          <button class="filter" type="button" data-filter="china">中美线</button>
+          <button class="filter" type="button" data-filter="musk">马斯克线</button>
+          <button class="filter" type="button" data-filter="civilization">文明线</button>
+        </div>
+
+        <div class="timeline" aria-label="商业航天发展时间线">
+          <article class="timeline-item reveal" data-category="cold">
+            <div class="time">1957</div>
+            <div class="event-panel" style="--event-image: url('assets/timeline-sputnik.png')">
+              <span class="tag cold">美苏 / 国际</span>
+              <h3>Sputnik 1 入轨</h3>
+              <p>苏联发射第一颗人造地球卫星，太空时代正式开始。美国迅速把航天上升为国家战略。</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal" data-category="cold">
+            <div class="time">1961</div>
+            <div class="event-panel" style="--event-image: url('assets/timeline-gagarin.png')">
+              <span class="tag cold">美苏 / 国际</span>
+              <h3>加加林进入太空</h3>
+              <p>人类第一次进入太空，载人航天成为超级大国竞争的新高地。</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal" data-category="cold">
+            <div class="time">1969</div>
+            <div class="event-panel" style="--event-image: url('assets/timeline-apollo.png')">
+              <span class="tag cold">美苏 / 国际</span>
+              <h3>Apollo 11 登月</h3>
+              <p>美国把冷战航天竞赛推向高潮。登月不是商业项目，却奠定了后来航天工业链的深厚基础。</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal" data-category="china">
+            <div class="time">1970</div>
+            <div class="event-panel" style="--event-image: url('assets/timeline-dongfanghong.png')">
+              <span class="tag china">中国航天</span>
+              <h3>东方红一号发射</h3>
+              <p>中国第一颗人造卫星进入太空，中国成为拥有独立发射和卫星能力的国家之一。</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal" data-category="cold">
+            <div class="time">1981</div>
+            <div class="event-panel" style="--event-image: url('assets/timeline-shuttle.png')">
+              <span class="tag cold">美苏 / 国际</span>
+              <h3>航天飞机首飞</h3>
+              <p>美国尝试让航天运输走向可重复使用。它并未真正降低成本，却留下了可复用航天器的长期想象。</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal" data-category="china">
+            <div class="time">2003</div>
+            <div class="event-panel" style="--event-image: url('assets/timeline-shenzhou.png')">
+              <span class="tag china">中国航天</span>
+              <h3>神舟五号载人飞行</h3>
+              <p>杨利伟进入太空，中国完成载人航天突破，后续空间实验室和空间站工程由此展开。</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal" data-category="musk commercial">
+            <div class="time">2002-2008</div>
+            <div class="event-panel" style="--event-image: url('assets/timeline-spacex-falcon1.png')">
+              <span class="tag commercial">商业航天</span>
+              <span class="tag musk">马斯克线</span>
+              <h3>SpaceX 成立并入轨</h3>
+              <p>Elon Musk 创立 SpaceX。Falcon 1 在 2008 年成功入轨，证明小型创业公司也能进入轨道发射赛道。</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal" data-category="musk commercial">
+            <div class="time">2012</div>
+            <div class="event-panel" style="--event-image: url('assets/timeline-dragon.png')">
+              <span class="tag commercial">商业航天</span>
+              <span class="tag musk">马斯克线</span>
+              <h3>Dragon 商业补给</h3>
+              <p>SpaceX Dragon 执行国际空间站商业补给任务，政府开始更明确地购买商业航天服务。</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal" data-category="china">
+            <div class="time">2014</div>
+            <div class="event-panel" style="--event-image: url('assets/timeline-china-policy.png')">
+              <span class="tag china">中国航天</span>
+              <h3>中国商业航天窗口打开</h3>
+              <p>政策和资本环境开始变化，一批民营火箭与卫星公司进入航天产业链。</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal" data-category="musk commercial">
+            <div class="time">2015</div>
+            <div class="event-panel" style="--event-image: url('assets/timeline-booster.png')">
+              <span class="tag commercial">商业航天</span>
+              <span class="tag musk">马斯克线</span>
+              <h3>Falcon 9 一级回收</h3>
+              <p>火箭不再只是“一次性消耗品”。可复用把商业航天的成本结构和发射节奏推向新阶段。</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal" data-category="china commercial">
+            <div class="time">2019</div>
+            <div class="event-panel" style="--event-image: url('assets/timeline-ispace-2019.png')">
+              <span class="tag china">中国航天</span>
+              <span class="tag commercial">商业航天</span>
+              <h3>中国民营火箭首次入轨</h3>
+              <p>星际荣耀双曲线一号成功入轨，中国商业发射从概念走向真实任务。</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal" data-category="musk commercial">
+            <div class="time">2020</div>
+            <div class="event-panel" style="--event-image: url('assets/timeline-crew-dragon.png')">
+              <span class="tag commercial">商业航天</span>
+              <span class="tag musk">马斯克线</span>
+              <h3>Crew Dragon 载人</h3>
+              <p>SpaceX 把 NASA 宇航员送往国际空间站，商业公司正式进入载人轨道运输核心环节。</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal" data-category="china">
+            <div class="time">2021-2022</div>
+            <div class="event-panel" style="--event-image: url('assets/timeline-tiangong.png')">
+              <span class="tag china">中国航天</span>
+              <h3>天宫空间站建成</h3>
+              <p>中国形成长期载人驻留和空间实验平台，国家航天能力从“任务型”进入“基础设施型”。</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal" data-category="china commercial">
+            <div class="time">2023</div>
+            <div class="event-panel" style="--event-image: url('assets/timeline-zhuque2.png')">
+              <span class="tag china">中国航天</span>
+              <span class="tag commercial">商业航天</span>
+              <h3>液氧甲烷与液体商业火箭突破</h3>
+              <p>蓝箭航天朱雀二号入轨，天兵科技天龙二号首飞成功，中国商业火箭开始进入更高技术密度赛道。</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal" data-category="china commercial">
+            <div class="time">2024</div>
+            <div class="event-panel" style="--event-image: url('assets/timeline-change6.png')">
+              <span class="tag china">中国航天</span>
+              <span class="tag commercial">商业航天</span>
+              <h3>月背采样与低轨星座</h3>
+              <p>嫦娥六号完成月球背面采样返回，千帆等低轨星座启动部署，中国把深空能力和商业网络建设同时推进。</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal" data-category="musk commercial civilization">
+            <div class="time">2026</div>
+            <div class="event-panel" style="--event-image: url('assets/timeline-spacex-capital.png')">
+              <span class="tag commercial">商业航天</span>
+              <span class="tag musk">马斯克线</span>
+              <span class="tag civilization">文明线</span>
+              <h3>商业航天进入文明叙事</h3>
+              <p>SpaceX 仍不是普通意义上的公开上市公司，但它的估值、融资、Starlink 现金流和火星目标，让商业机制与星际文明想象绑定在一起。</p>
+            </div>
+          </article>
+          <article class="timeline-item reveal" data-category="civilization musk">
+            <div class="time">未来</div>
+            <div class="event-panel" style="--event-image: url('assets/timeline-interstellar-future.png')">
+              <span class="tag civilization">文明线</span>
+              <span class="tag musk">马斯克线</span>
+              <h3>从地球文明到星际文明</h3>
+              <p>月球基地、火星移民、深空运输和在轨产业，将商业航天从产业升级推向文明升维。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="compare section-pad" id="compare" aria-labelledby="compare-title">
+        <div class="section-head reveal">
+          <div class="section-kicker">商业机制</div>
+          <h2 id="compare-title">商业航天，是新时代的大航海机制</h2>
+          <p>国家仍然定义战略方向，但商业公司把风险、资本、制造、服务和市场连接起来，让探索不再只依赖一次性预算。</p>
+        </div>
+
+        <div class="mechanism-grid">
+          <article class="mechanism-card reveal" style="--mechanism-image: url('assets/card-mechanism-sail.png')">
+            <span>Age of Sail</span>
+            <h3>大航海时代</h3>
+            <p>王室、商人、船队、保险和贸易公司共同承担远航风险，海洋探索由此从冒险变成持续扩张的制度。</p>
+          </article>
+          <article class="mechanism-card reveal" style="--mechanism-image: url('assets/card-mechanism-newspace.png')">
+            <span>New Space</span>
+            <h3>商业航天时代</h3>
+            <p>政府采购、风险资本、卫星服务、可复用火箭和星座收入共同支撑太空探索，把火箭变成可迭代的产业平台。</p>
+          </article>
+          <article class="mechanism-card reveal" style="--mechanism-image: url('assets/card-mechanism-civilization.png')">
+            <span>Civilization</span>
+            <h3>文明升维</h3>
+            <p>当运输成本下降、轨道基础设施变密，月球基地、火星移民和深空经济才有机会从愿景变成历史进程。</p>
+          </article>
+        </div>
+
+        <div class="duel-grid">
+          <article class="duel-card spacex reveal">
+            <div class="duel-top">
+              <span>马斯克 / SpaceX 超前线</span>
+              <strong>复用火箭 + Starlink + Starship + 火星目标</strong>
+            </div>
+            <ul>
+              <li>Falcon 9 形成高频发射与回收节奏</li>
+              <li>Crew Dragon 承担商业载人运输</li>
+              <li>Starlink 把发射能力转化为卫星互联网业务</li>
+              <li>Starship 指向月球、火星和更大规模深空运输</li>
+            </ul>
+          </article>
+          <article class="duel-card china-side reveal">
+            <div class="duel-top">
+              <span>中国 / 中美同台线</span>
+              <strong>国家工程 + 民营火箭 + 低轨星座</strong>
+            </div>
+            <ul>
+              <li>天宫空间站提供长期在轨平台</li>
+              <li>嫦娥工程持续推进月球探测能力</li>
+              <li>蓝箭、星河动力、天兵科技等商业公司追赶</li>
+              <li>千帆、国网等星座对应全球卫星互联网竞争</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="future section-pad" id="future" aria-labelledby="future-title">
+        <div class="section-head reveal">
+          <div class="section-kicker">未来图谱</div>
+          <h2 id="future-title">下一站不是一枚火箭，而是一种文明形态</h2>
+          <p>轨道经济只是中间层。更宏大的目标，是让地球文明具备离开单一星球、建设月球基地、登陆火星并长期生存的能力。</p>
+        </div>
+
+        <div class="civilization-hero reveal" id="civilization">
+          <img src="assets/civilization-interstellar.png" alt="" />
+          <div class="civilization-copy">
+            <span>History Moves Forward</span>
+            <h3>历史的车轮，把人类推向星际文明</h3>
+            <p>
+              从大陆到海洋，从天空到轨道，人类文明每一次升维都伴随着新的交通系统、新的商业制度和新的世界想象。
+              商业航天的意义，正是在国家工程之外，创造一套能持续承担风险、持续迭代技术、持续扩大边界的机制。
+            </p>
+          </div>
+        </div>
+
+        <div class="orbit-map reveal" aria-label="未来航天产业地图">
+          <div class="orbit-ring ring-one"></div>
+          <div class="orbit-ring ring-two"></div>
+          <div class="orbit-core">
+            <img src="assets/orbit-earth-center.png" alt="" />
+            <span>Orbital Economy</span>
+            <strong>轨道经济</strong>
+          </div>
+          <article class="node launch" style="--node-image: url('assets/node-launch-cost.png')">
+            <span>低成本发射</span>
+            <p>复用、批量制造、快速周转</p>
+          </article>
+          <article class="node internet" style="--node-image: url('assets/node-satellite-internet.png')">
+            <span>卫星互联网</span>
+            <p>Starlink、千帆、国网</p>
+          </article>
+          <article class="node station" style="--node-image: url('assets/node-space-station.png')">
+            <span>商业空间站</span>
+            <p>科研、制造、旅游</p>
+          </article>
+          <article class="node moon" style="--node-image: url('assets/node-lunar-economy.png')">
+            <span>月球经济</span>
+            <p>采样、基地、资源验证</p>
+          </article>
+          <article class="node mars" style="--node-image: url('assets/node-deep-space.png')">
+            <span>深空运输</span>
+            <p>火星移民与多行星文明</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="wallpapers section-pad" id="wallpapers" aria-labelledby="wallpapers-title">
+        <div class="section-head reveal">
+          <div class="section-kicker">壁纸下载</div>
+          <h2 id="wallpapers-title">把这组航天视觉收藏起来</h2>
+          <p>点击任意缩略图可以放大查看，并下载单张图片。</p>
+        </div>
+
+        <div class="wallpaper-grid">
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/hero-orbital-economy.png" data-title="从太空竞赛到轨道经济">
+            <img src="assets/hero-orbital-economy.png" alt="" />
+            <span>首屏 · 轨道经济</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/stage-cold-war.png" data-title="美苏太空竞赛">
+            <img src="assets/stage-cold-war.png" alt="" />
+            <span>阶段 · 美苏竞赛</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/stage-infrastructure.png" data-title="空间基础设施时代">
+            <img src="assets/stage-infrastructure.png" alt="" />
+            <span>阶段 · 空间基建</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/stage-china-rise.png" data-title="中国国家航天崛起">
+            <img src="assets/stage-china-rise.png" alt="" />
+            <span>阶段 · 中国航天</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/stage-musk-line.png" data-title="马斯克超前线">
+            <img src="assets/stage-musk-line.png" alt="" />
+            <span>阶段 · 马斯克线</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/stage-china-us.png" data-title="中美商业航天同台">
+            <img src="assets/stage-china-us.png" alt="" />
+            <span>阶段 · 中美同台</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/civilization-interstellar.png" data-title="历史车轮与星际文明">
+            <img src="assets/civilization-interstellar.png" alt="" />
+            <span>终章 · 文明升维</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/stage-civilization-ascent.png" data-title="阶段 · 文明升维">
+            <img src="assets/stage-civilization-ascent.png" alt="" />
+            <span>阶段 · 文明升维</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/timeline-sputnik.png" data-title="Sputnik 1 入轨">
+            <img src="assets/timeline-sputnik.png" alt="" />
+            <span>时间线 · Sputnik</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/timeline-gagarin.png" data-title="加加林进入太空">
+            <img src="assets/timeline-gagarin.png" alt="" />
+            <span>时间线 · 加加林</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/timeline-apollo.png" data-title="Apollo 11 登月">
+            <img src="assets/timeline-apollo.png" alt="" />
+            <span>时间线 · Apollo</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/timeline-dongfanghong.png" data-title="东方红一号">
+            <img src="assets/timeline-dongfanghong.png" alt="" />
+            <span>时间线 · 东方红</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/timeline-shuttle.png" data-title="航天飞机首飞">
+            <img src="assets/timeline-shuttle.png" alt="" />
+            <span>时间线 · 航天飞机</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/timeline-shenzhou.png" data-title="神舟五号">
+            <img src="assets/timeline-shenzhou.png" alt="" />
+            <span>时间线 · 神舟</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/timeline-spacex-falcon1.png" data-title="SpaceX 成立并入轨">
+            <img src="assets/timeline-spacex-falcon1.png" alt="" />
+            <span>时间线 · Falcon 1</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/timeline-dragon.png" data-title="Dragon 商业补给">
+            <img src="assets/timeline-dragon.png" alt="" />
+            <span>时间线 · Dragon</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/timeline-china-policy.png" data-title="中国商业航天窗口">
+            <img src="assets/timeline-china-policy.png" alt="" />
+            <span>时间线 · 中国商业窗口</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/timeline-booster.png" data-title="Falcon 9 一级回收">
+            <img src="assets/timeline-booster.png" alt="" />
+            <span>时间线 · 火箭回收</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/timeline-ispace-2019.png" data-title="中国民营火箭首次入轨">
+            <img src="assets/timeline-ispace-2019.png" alt="" />
+            <span>时间线 · 民营入轨</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/timeline-crew-dragon.png" data-title="Crew Dragon 载人">
+            <img src="assets/timeline-crew-dragon.png" alt="" />
+            <span>时间线 · 商业载人</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/timeline-tiangong.png" data-title="天宫空间站">
+            <img src="assets/timeline-tiangong.png" alt="" />
+            <span>时间线 · 天宫</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/timeline-zhuque2.png" data-title="液氧甲烷火箭突破">
+            <img src="assets/timeline-zhuque2.png" alt="" />
+            <span>时间线 · 朱雀二号</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/timeline-china-commercial.png" data-title="中国商业火箭">
+            <img src="assets/timeline-china-commercial.png" alt="" />
+            <span>素材 · 中国商业火箭</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/timeline-change6.png" data-title="月背采样与低轨星座">
+            <img src="assets/timeline-change6.png" alt="" />
+            <span>时间线 · 嫦娥六号</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/timeline-constellation.png" data-title="低轨卫星星座">
+            <img src="assets/timeline-constellation.png" alt="" />
+            <span>素材 · 低轨星座</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/timeline-spacex-capital.png" data-title="商业航天进入文明叙事">
+            <img src="assets/timeline-spacex-capital.png" alt="" />
+            <span>时间线 · 资本与火星</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/timeline-interstellar-future.png" data-title="从地球文明到星际文明">
+            <img src="assets/timeline-interstellar-future.png" alt="" />
+            <span>时间线 · 星际未来</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/card-summary-cold-war.png" data-title="摘要卡 · 冷战竞赛">
+            <img src="assets/card-summary-cold-war.png" alt="" />
+            <span>摘要 · 冷战竞赛</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/card-summary-china-us.png" data-title="摘要卡 · 中美同台">
+            <img src="assets/card-summary-china-us.png" alt="" />
+            <span>摘要 · 中美同台</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/card-summary-interstellar.png" data-title="摘要卡 · 星际文明">
+            <img src="assets/card-summary-interstellar.png" alt="" />
+            <span>摘要 · 星际文明</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/card-line-us-soviet.png" data-title="叙事线 · 美苏线">
+            <img src="assets/card-line-us-soviet.png" alt="" />
+            <span>叙事线 · 美苏线</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/card-line-china-us.png" data-title="叙事线 · 中美线">
+            <img src="assets/card-line-china-us.png" alt="" />
+            <span>叙事线 · 中美线</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/card-line-musk.png" data-title="叙事线 · 马斯克线">
+            <img src="assets/card-line-musk.png" alt="" />
+            <span>叙事线 · 马斯克线</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/card-line-civilization.png" data-title="叙事线 · 文明线">
+            <img src="assets/card-line-civilization.png" alt="" />
+            <span>叙事线 · 文明线</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/orbit-earth-center.png" data-title="轨道经济 · 地球中心">
+            <img src="assets/orbit-earth-center.png" alt="" />
+            <span>轨道经济 · 地球</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/card-mechanism-sail.png" data-title="机制 · 大航海时代">
+            <img src="assets/card-mechanism-sail.png" alt="" />
+            <span>机制 · 大航海</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/card-mechanism-newspace.png" data-title="机制 · 商业航天时代">
+            <img src="assets/card-mechanism-newspace.png" alt="" />
+            <span>机制 · 商业航天</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/card-mechanism-civilization.png" data-title="机制 · 文明升维">
+            <img src="assets/card-mechanism-civilization.png" alt="" />
+            <span>机制 · 文明升维</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/node-launch-cost.png" data-title="节点 · 低成本发射">
+            <img src="assets/node-launch-cost.png" alt="" />
+            <span>节点 · 低成本发射</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/node-satellite-internet.png" data-title="节点 · 卫星互联网">
+            <img src="assets/node-satellite-internet.png" alt="" />
+            <span>节点 · 卫星互联网</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/node-space-station.png" data-title="节点 · 商业空间站">
+            <img src="assets/node-space-station.png" alt="" />
+            <span>节点 · 商业空间站</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/node-lunar-economy.png" data-title="节点 · 月球经济">
+            <img src="assets/node-lunar-economy.png" alt="" />
+            <span>节点 · 月球经济</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/node-deep-space.png" data-title="节点 · 深空运输">
+            <img src="assets/node-deep-space.png" alt="" />
+            <span>节点 · 深空运输</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/card-duel-spacex.png" data-title="对照 · SpaceX 路线">
+            <img src="assets/card-duel-spacex.png" alt="" />
+            <span>对照 · SpaceX</span>
+          </button>
+          <button class="wallpaper-card reveal" type="button" data-wallpaper="assets/card-duel-china.png" data-title="对照 · 中国路线">
+            <img src="assets/card-duel-china.png" alt="" />
+            <span>对照 · 中国路线</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="sources section-pad" aria-labelledby="sources-title">
+        <div class="sources-box reveal">
+          <div>
+            <div class="section-kicker">资料来源</div>
+            <h2 id="sources-title">事实节点参考</h2>
+          </div>
+          <ul>
+            <li><a href="https://www.nasa.gov/history/apollo-11-mission-overview/" target="_blank" rel="noreferrer">NASA · Apollo 11 Mission Overview</a></li>
+            <li><a href="https://www.nasa.gov/humans-in-space/commercial-space/commercial-crew-program/" target="_blank" rel="noreferrer">NASA · Commercial Crew Program</a></li>
+            <li><a href="https://www.spacex.com/vehicles/starship/" target="_blank" rel="noreferrer">SpaceX · Starship</a></li>
+            <li><a href="https://www.spacex.com/humanspaceflight/mars/" target="_blank" rel="noreferrer">SpaceX · Mars and multiplanetary future</a></li>
+            <li><a href="https://spacenews.com/chinas-landspace-reaches-orbit-with-methane-powered-zhuque-2-rocket/" target="_blank" rel="noreferrer">SpaceNews · Zhuque-2 methane rocket reaches orbit</a></li>
+            <li><a href="https://spacenews.com/china-launches-first-satellites-for-thousand-sails-megaconstellation/" target="_blank" rel="noreferrer">SpaceNews · Thousand Sails constellation</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>从太空竞赛到轨道经济 · 商业航天发展史单页科普</p>
+    </footer>
+
+    <div class="lightbox" aria-hidden="true">
+      <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="壁纸预览">
+        <button class="lightbox-close" type="button" aria-label="关闭预览">×</button>
+        <img alt="" />
+        <div class="lightbox-actions">
+          <strong></strong>
+          <a href="#" download>下载图片</a>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
